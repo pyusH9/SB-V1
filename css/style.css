@@ -354,10 +354,11 @@ body {
   color: #3a2c2a;
 }
 
-/* Responsive */
 @media(max-width: 768px){
   .works-grid {
     grid-template-columns: 1fr;
   }
 }
+
+
 
