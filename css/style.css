@@ -74,3 +74,28 @@ input, select, textarea {
 
 section { padding: 2rem; }
 h1,h2,h3 { color: var(--burgundy); }
+
+.card, .artist-card {
+  background-color: #fff3e0;
+  border-radius: 10px;
+  padding: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 8px rgba(128,0,32,0.2);
+}
+
+.card:hover, .artist-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(128,0,32,0.3);
+}
+
+.badge {
+  display:inline-block;
+  margin-top:0.5rem;
+  padding:0.2rem 0.5rem;
+  background-color: #800020;
+  color: #fff;
+  border-radius:5px;
+  font-size:0.8rem;
+}
+
