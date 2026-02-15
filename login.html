@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <nav class="navbar burgundy-shadow">
+    <a href="index.html" class="logo">SahityaBitt</a>
+  </nav>
+</header>
+
+<section>
+  <h1>Login</h1>
+  <form id="login-form">
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="password" name="password" placeholder="Password" required>
+    <button type="submit" class="btn">Login</button>
+  </form>
+</section>
+
+<script>
+document.getElementById('login-form').addEventListener('submit', async (e)=>{
+  e.preventDefault();
+  const formData = new FormData(e.target);
+  const res = await fetch('../backend/auth.php', {method:'POST', body:formData});
+  const data = await res.json();
+  alert(data.status==='success'? 'Logged in as '+data.role : data.message);
+});
+</script>
+</body>
+</html>
