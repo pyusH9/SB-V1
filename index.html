@@ -5,37 +5,102 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SahityaBitt - Home</title>
   <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/scrollreveal"></script> <!-- Scroll animations -->
 </head>
 <body>
-
-<header>
-  <nav class="navbar burgundy-shadow">
-    <a href="index.html" class="logo">SahityaBitt</a>
+  <!-- ===== Header ===== -->
+  <header class="navbar">
+    <div class="logo"><a href="index.html">SahityaBitt</a></div>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="contact.html">Contact</a></li>
       <li><a href="login.html">Login</a></li>
+      <li><a href="signup.html">Sign Up</a></li>
     </ul>
-  </nav>
-</header>
+  </header>
 
-<section class="hero">
-  <h1>Empowering Nepali Creators</h1>
-  <p>Showcase your work and earn income securely</p>
-  <a href="signup.html" class="btn primary-btn">Get Started</a>
-</section>
+  <!-- ===== Hero Section ===== -->
+  <section class="hero" style="background:linear-gradient(135deg, #fff8e7, #ffe4b3);">
+    <h1>Discover Nepal’s Poets & Storytellers</h1>
+    <p>Support creators, explore poetry and stories, and grow the literary community.</p>
+  </section>
 
-<section class="top-artists">
-  <h2>Today's Top Artists</h2>
-  <div class="grid-container" id="artist-grid"></div>
-  <div class="grid-container" id="artist-grid">
-  <!-- JS will populate top artists here -->
-</div>
+  <!-- ===== Featured Artists ===== -->
+  <section>
+    <h2 style="text-align:center;">Top Artists</h2>
+    <div class="grid-container" id="artist-grid">
+      <!-- JS will populate dynamically -->
+    </div>
+  </section>
 
-</section>
+  <!-- ===== Featured Poems ===== -->
+  <section>
+    <h2 style="text-align:center;">Poetry Highlights</h2>
+    <div class="grid-container" id="poem-grid">
+      <!-- Example static cards, will replace with dynamic fetch later -->
+      <div class="card" onclick="openFull('poem1.html')">
+        <h3>The Mountain’s Whisper</h3>
+        <p>A short excerpt from a Nepali poet...</p>
+        <span class="badge">Poem</span>
+      </div>
+      <div class="card" onclick="openFull('poem2.html')">
+        <h3>Evening Rain</h3>
+        <p>Raindrops over Kathmandu streets...</p>
+        <span class="badge">Poem</span>
+      </div>
+      <div class="card" onclick="openFull('poem3.html')">
+        <h3>Lost in Thoughts</h3>
+        <p>A meditation on life and dreams...</p>
+        <span class="badge">Poem</span>
+      </div>
+    </div>
+  </section>
 
-<script src="js/main.js"></script>
+  <!-- ===== Featured Stories ===== -->
+  <section>
+    <h2 style="text-align:center;">Stories to Read</h2>
+    <div class="grid-container" id="story-grid">
+      <div class="card" onclick="openFull('story1.html')">
+        <h3>The Forgotten Village</h3>
+        <p>A short story about rural life in Nepal...</p>
+        <span class="badge">Story</span>
+      </div>
+      <div class="card" onclick="openFull('story2.html')">
+        <h3>City Lights</h3>
+        <p>Urban adventures and hidden tales...</p>
+        <span class="badge">Story</span>
+      </div>
+      <div class="card" onclick="openFull('story3.html')">
+        <h3>Beyond the Hills</h3>
+        <p>A journey through mountains and memories...</p>
+        <span class="badge">Story</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer style="background-color:#ffe4b3;padding:2rem;text-align:center;">
+    <p>&copy; 2026 SahityaBitt | Made with ❤️ for Nepalese literature</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Scroll Reveal Animations
+    ScrollReveal().reveal('.grid-container .card, .artist-card', {
+      origin: 'bottom',
+      distance: '40px',
+      duration: 800,
+      easing: 'ease-out',
+      interval: 200
+    });
+
+    // Open full poetry/story in new tab
+    function openFull(url){
+      window.open(url, '_blank');
+    }
+  </script>
 </body>
 </html>
