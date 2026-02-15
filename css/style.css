@@ -99,3 +99,22 @@ h1,h2,h3 { color: var(--burgundy); }
   font-size:0.8rem;
 }
 
+.hero {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #800020; /* burgundy text */
+  text-align: center;
+  padding: 2rem;
+  border-radius: 10px;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.hero p {
+  font-size: 1.2rem;
+}
+
