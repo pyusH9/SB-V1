@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+  // ====== Top Artists ======
   const artistGrid = document.getElementById('artist-grid');
   if(artistGrid){
     fetch('../backend/get_top_artists.php')
@@ -18,4 +20,32 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       });
   }
+
+  // ====== Signup Form ======
+  const signupForm = document.getElementById('signup-form');
+  if(signupForm){
+    signupForm.addEventListener('submit', async e => {
+      e.preventDefault();
+      const formData = new FormData(signupForm);
+
+      try {
+        const res = await fetch('../backend/signup.php', {  // make sure path is correct
+          method: 'POST',
+          body: formData
+        });
+        const data = await res.json();
+
+        if(data.status === 'success'){
+          alert('Signup successful! Redirecting to login...');
+          window.location.href = 'login.html';
+        } else {
+          alert('Error: ' + data.message);
+        }
+      } catch(err){
+        console.error(err);
+        alert('Signup failed due to network error.');
+      }
+    });
+  }
+
 });
