@@ -48,26 +48,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
- function openWork(url){
-   // Animate cards when they appear in viewport
-const cards = document.querySelectorAll('.work-card');
+ // Modal logic
+const modal = document.getElementById('work-modal');
+const modalTitle = modal.querySelector('.modal-title');
+const modalText = modal.querySelector('.modal-text');
+const closeBtn = modal.querySelector('.close-btn');
 
-function animateCards() {
-  const triggerBottom = window.innerHeight * 0.85;
-
-  cards.forEach(card => {
-    const cardTop = card.getBoundingClientRect().top;
-    if (cardTop < triggerBottom) {
-      card.classList.add('visible');
-    }
-  });
+function openWork(title, text) {
+  modalTitle.innerText = title;
+  modalText.innerText = text;
+  modal.style.display = 'block';
 }
 
-window.addEventListener('scroll', animateCards);
-window.addEventListener('load', animateCards);
+closeBtn.onclick = () => modal.style.display = 'none';
+window.onclick = (e) => { if(e.target == modal) modal.style.display = 'none'; }
 
-  window.location.href = url;
-}
 
 
 
