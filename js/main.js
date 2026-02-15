@@ -48,9 +48,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  function openWork(url){
+ function openWork(url){
   window.location.href = url;
 }
+
 
 
 });
