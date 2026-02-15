@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KYC Verification</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <nav class="navbar burgundy-shadow">
+    <a href="index.html" class="logo">SahityaBitt</a>
+  </nav>
+</header>
+
+<section>
+  <h1>KYC Verification</h1>
+  <form id="kyc-form" enctype="multipart/form-data">
+    <label>ID Document</label>
+    <input type="file" name="id_doc" required>
+    <label>Selfie</label>
+    <input type="file" name="selfie" required>
+    <button type="submit" class="btn">Submit</button>
+  </form>
+</section>
+
+<script>
+document.getElementById('kyc-form').addEventListener('submit', async (e)=>{
+  e.preventDefault();
+  const formData = new FormData(e.target);
+  const res = await fetch('../backend/kyc.php',{method:'POST',body:formData});
+  const data = await res.json();
+  alert(data.status==='success'? 'KYC uploaded successfully':'Upload failed');
+});
+</script>
+</body>
+</html>
