@@ -63,6 +63,37 @@ function openWork(title, text) {
 closeBtn.onclick = () => modal.style.display = 'none';
 window.onclick = (e) => { if(e.target == modal) modal.style.display = 'none'; }
 
+// Scroll animation for work cards
+const cards = document.querySelectorAll('.work-card');
+
+function animateCards() {
+  const triggerBottom = window.innerHeight * 0.85;
+
+  cards.forEach(card => {
+    const cardTop = card.getBoundingClientRect().top;
+    if (cardTop < triggerBottom) {
+      card.classList.add('visible');
+    }
+  });
+}
+
+window.addEventListener('scroll', animateCards);
+window.addEventListener('load', animateCards);
+
+// Modal logic
+const modal = document.getElementById('work-modal');
+const modalTitle = modal.querySelector('.modal-title');
+const modalText = modal.querySelector('.modal-text');
+const closeBtn = modal.querySelector('.close-btn');
+
+function openWork(title, text) {
+  modalTitle.innerText = title;
+  modalText.innerText = text;
+  modal.style.display = 'block';
+}
+
+closeBtn.onclick = () => modal.style.display = 'none';
+window.onclick = (e) => { if(e.target == modal) modal.style.display = 'none'; }
 
 
 
