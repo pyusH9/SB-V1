@@ -1,12 +1,11 @@
-/* SahityaBitt - Gen Z Aesthetic Typography */
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&family=Playfair+Display:wght@700&display=swap');
+/* SahityaBitt - Gen Z Aesthetic / Beige Theme */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:wght@700&display=swap');
 
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background-color: #f8f5f0; /* soft off-white */
-  color: #3a2c2a; /* dark beige/brown for text */
+  background-color: #f8f5f0; /* soft beige/off-white */
+  color: #3a2c2a; /* dark beige/brown */
   line-height: 1.6;
 }
 
@@ -16,7 +15,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #fff7ed; /* light beige */
+  background-color: #fff8ed;
   box-shadow: 0 2px 10px rgba(58,44,42,0.1);
   font-weight: 600;
 }
@@ -24,11 +23,12 @@ body {
 .navbar a {
   text-decoration: none;
   color: #3a2c2a;
-  transition: color 0.3s;
+  margin-left: 1.5rem;
+  transition: color 0.3s ease;
 }
 
 .navbar a:hover {
-  color: #d1a77f;
+  color: #c19a6b; /* subtle gold accent */
 }
 
 /* Hero Section */
@@ -40,7 +40,7 @@ body {
   align-items: center;
   text-align: center;
   padding: 4rem 2rem;
-  background: linear-gradient(rgba(248,245,240,0.8), rgba(248,245,240,0.8)), url('../images/basantapur.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(248,245,240,0.85), rgba(248,245,240,0.85)), url('../images/basantapur.jpg') center/cover no-repeat;
 }
 
 .hero h1 {
@@ -48,15 +48,15 @@ body {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  color: #c19a6b; /* soft gold/beige accent */
+  color: #c19a6b;
   text-shadow: 1px 1px 2px rgba(58,44,42,0.2);
 }
 
 .hero p {
   font-size: 1.3rem;
   margin-bottom: 2rem;
-  color: #3a2c2a;
   max-width: 600px;
+  color: #3a2c2a;
 }
 
 /* CTA Button */
@@ -104,7 +104,6 @@ body {
 }
 
 .service-card h3 {
-  font-family: 'Poppins', sans-serif;
   font-weight: 600;
   margin-bottom: 1rem;
   color: #3a2c2a;
@@ -155,7 +154,6 @@ body {
 }
 
 .portfolio-card h3 {
-  font-family: 'Poppins', sans-serif;
   font-weight: 600;
   margin: 1rem;
   color: #3a2c2a;
@@ -201,7 +199,6 @@ body {
   padding: 1rem;
   border-radius: 12px;
   border: 1px solid #d6c4ad;
-  font-family: 'Poppins', sans-serif;
   font-weight: 400;
 }
 
@@ -221,15 +218,14 @@ body {
 
 /* Footer */
 .footer {
-  background-color: #e6d9c5;
+  background-color: #f5eee5;
   color: #3a2c2a;
   text-align: center;
   padding: 1.5rem;
-  font-family: 'Poppins', sans-serif;
   font-weight: 500;
 }
 
-
+/* Responsive */
 @media(max-width: 768px) {
   .hero h1 { font-size: 2.2rem; }
   .services-grid, .portfolio-grid { grid-template-columns: 1fr; }
