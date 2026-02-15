@@ -1,16 +1,15 @@
-<!-- Updated index.html for SahityaBitt -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SahityaBitt - Modern Literature Landing</title>
+<title>SahityaBitt - Home</title>
 <link rel="stylesheet" href="css/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/scrollreveal"></script>
 </head>
 <body>
-  <!-- Header (reuse existing) -->
+  <!-- Header -->
   <header class="navbar">
     <div class="logo"><a href="index.html">SahityaBitt</a></div>
     <ul class="nav-links">
@@ -24,17 +23,9 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="hero-modern">
-    <div class="hero-left">
-      <h1>Discover Nepal’s Creative Minds</h1>
-      <p>Explore, support, and celebrate poetry, stories, and visual storytelling.</p>
-      <a href="signup.html" class="cta-btn">Join the Community</a>
-    </div>
-    <div class="hero-right">
-      <img src="images/placeholder-hero.png" alt="Literature illustration">
-      <div class="floating-shape shape1"></div>
-      <div class="floating-shape shape2"></div>
-    </div>
+  <section class="hero">
+    <h1>Discover Nepal’s Poets & Storytellers</h1>
+    <p>Support creators, explore poetry and stories, and grow the literary community.</p>
   </section>
 
   <!-- Services Section -->
@@ -43,19 +34,19 @@
     <div class="services-grid">
       <div class="service-card">
         <h3>Branding & Strategy</h3>
-        <p>Develop your personal or literary brand with creative strategy.</p>
+        <p>Develop your literary brand and strategy.</p>
       </div>
       <div class="service-card">
         <h3>Graphic Design</h3>
-        <p>Visual storytelling, book covers, and promotional design solutions.</p>
+        <p>Visual storytelling, book covers, and promo designs.</p>
       </div>
       <div class="service-card">
         <h3>Web Design</h3>
-        <p>Showcase your works online with modern, aesthetic websites.</p>
+        <p>Showcase your works online with aesthetic websites.</p>
       </div>
       <div class="service-card">
         <h3>Digital Marketing</h3>
-        <p>Grow your audience with smart, literary-focused campaigns.</p>
+        <p>Grow your audience with smart campaigns.</p>
       </div>
     </div>
   </section>
@@ -63,43 +54,8 @@
   <!-- Featured Works / Portfolio -->
   <section class="portfolio">
     <h2>Featured Works</h2>
-    <div class="portfolio-grid">
-      <div class="portfolio-card">
-        <img src="images/placeholder1.png" alt="Work 1">
-        <h3>Mountain Whispers</h3>
-        <p>Poetry exploring the peaks and valleys of Nepal.</p>
-      </div>
-      <div class="portfolio-card">
-        <img src="images/placeholder2.png" alt="Work 2">
-        <h3>Urban Tales</h3>
-        <p>Short stories capturing the essence of city life.</p>
-      </div>
-      <div class="portfolio-card">
-        <img src="images/placeholder3.png" alt="Work 3">
-        <h3>Illustrated Poems</h3>
-        <p>Poetry combined with visual artwork for immersive reading.</p>
-      </div>
-      <div class="portfolio-card">
-        <img src="images/placeholder4.png" alt="Work 4">
-        <h3>Beyond the Hills</h3>
-        <p>Stories of journeys through Nepali landscapes and culture.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Media / Features Section -->
-  <section class="media-features">
-    <div class="feature light">
-      <img src="images/placeholder-media1.png" alt="Media 1">
-      <p>Featured in Kathmandu Literary Journal</p>
-    </div>
-    <div class="feature dark">
-      <img src="images/placeholder-media2.png" alt="Media 2">
-      <p>Showcased on Nepal Storytelling Platform</p>
-    </div>
-    <div class="feature light">
-      <img src="images/placeholder-media3.png" alt="Media 3">
-      <p>Featured in Creative Writers’ Magazine</p>
+    <div class="portfolio-grid" id="artist-grid">
+      <!-- JS will inject artist cards here -->
     </div>
   </section>
 
@@ -120,18 +76,17 @@
     </form>
   </section>
 
-  <!-- Footer (reuse existing) -->
+  <!-- Footer -->
   <footer class="footer">
     <p>&copy; 2026 SahityaBitt | Made with ❤️ for Nepalese literature</p>
   </footer>
 
 <script src="js/main.js"></script>
 <script>
-  // Scroll Reveal Animations
-  ScrollReveal().reveal('.hero-left, .hero-right, .service-card, .portfolio-card, .feature, .about-us, .contact', {
+  ScrollReveal().reveal('.hero, .service-card, .portfolio-card, .about-us, .contact', {
     origin: 'bottom',
-    distance: '40px',
-    duration: 800,
+    distance: '30px',
+    duration: 700,
     easing: 'ease-out',
     interval: 200
   });
