@@ -304,3 +304,60 @@ body {
     padding: 1rem;
   }
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap');
+
+.works-section {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #fdf8f3;
+}
+
+.works-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #c19a6b;
+}
+
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.work-card {
+  background-color: #fffaf0;
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 20px rgba(58,44,42,0.08);
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+}
+
+.work-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 12px 25px rgba(58,44,42,0.15);
+  background-color: #f7eee2;
+}
+
+.work-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.6rem;
+  color: #c19a6b;
+  margin-bottom: 0.8rem;
+}
+
+.work-desc {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  color: #3a2c2a;
+}
+
+/* Responsive */
+@media(max-width: 768px){
+  .works-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
