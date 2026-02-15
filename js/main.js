@@ -49,6 +49,23 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
  function openWork(url){
+   // Animate cards when they appear in viewport
+const cards = document.querySelectorAll('.work-card');
+
+function animateCards() {
+  const triggerBottom = window.innerHeight * 0.85;
+
+  cards.forEach(card => {
+    const cardTop = card.getBoundingClientRect().top;
+    if (cardTop < triggerBottom) {
+      card.classList.add('visible');
+    }
+  });
+}
+
+window.addEventListener('scroll', animateCards);
+window.addEventListener('load', animateCards);
+
   window.location.href = url;
 }
 
